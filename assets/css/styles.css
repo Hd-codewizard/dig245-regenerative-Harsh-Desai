@@ -1,2 +1,73 @@
 
 /* css */
+html,body{
+    background: var(--default);
+}
+
+:root{
+    --default: white;
+    --empty: #666666;
+    --wrong:#d8bd45;
+    --right:#4ad13e;
+}
+
+h1{
+    text-align: center;
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(21, 146, 58);
+    padding-top: 10px;
+}
+hr {
+    border-top: 6px solid rgb(112, 47, 23);     
+    opacity: 100;
+    margin-bottom: 40px;
+}
+#game{
+    place-items: center;
+    width: 100%;
+    height: 600px;
+    margin-top: 0;
+}
+.grid{
+    display: grid;
+    margin-top: 0%;
+    grid-template-columns: repeat(5,auto);
+    grid-template-rows: repeat(6,auto);
+    gap: 10px;
+}
+.box{
+    width: 60px;
+    height:60px;
+    border: 2px solid var(--empty);
+    color: black;
+    text-transform: uppercase;
+    display: grid;
+    place-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.4rem;
+}
+.box.empty{
+    background: var(--empty);
+}
+.box.wrong{
+    background: var(--wrong);
+}
+.box.right{
+    background: var(--right);
+}
+.animated{
+    animation: flip 0.5s ease;
+}
+@keyframes flip {
+    0%{
+        transform: scaleY(1);
+    }
+    50%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
